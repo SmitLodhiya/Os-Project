@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAB PROJECT</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div>
+          <div class="name">PDEU</div>
+          <div class="logo">LAB PROJECT</div>
+          <div class="button">
+            <a href="https://github.com/Cipher-god/os-team-project">
+              <div>Github</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mainpage">
+        <div class="page">
+          <div class="heading" >
+            <p>Operating</p>
+            <p>System</p>
+            <p>LAB PROJECT</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="info">
+          <div class="subheading">
+            <div>
+              <div>think <span>and</span> learn</div>
+              <div>
+                <div class="os">OPERATING SYSTEM</div>
+                <div class="defination">
+                  An operating system is a program that acts as an interface<br />
+                  between the user and the computer hardware and controls the<br />
+                  execution of all kinds of programs.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="menu">
+            <div class="menu-heading">THE TOPICS</div>
+
+            <div>
+              <div class="deadlock">
+                <a href="FCFS/fcfs.html">
+                  <div class="image">
+                    <div class="link">LEARN MORE</div>
+                    <div class="title">F. C. F. S.</div>
+                  </div>
+                  <div class="text">
+                    <div class="text-heading">What Is FCFS ?</div>FCFS is the simplest disk scheduling algorithm. As the name suggests, this algorithm entertains requests in the order they arrive in the disk queue. The algorithm looks very fair and there is no starvation (all requests are serviced sequentially) but generally, it does not provide the fastest service.
+                  </div>
+                </a>
+              </div>
+              <div class="sheduling">
+                <a href="PETERSONS_ALGO/peterson_algo.html">
+                  <div class="image">
+                    <div class="link">LEARN MORE</div>
+                    <div class="title">PETERSON' S ALGORITHM</div>
+                  </div>
+                  <div class="text">
+                    <div class="text-heading">Learn Peterson's Algoritm.</div>
+                   Peterson's algorithm is a concurrent programming algorithm for mutual exclusion that allows two or more processes to share a single-use resource without conflict.
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="page">
+                <a href="OPTIMAL_PAGE_REPLACEMENT/optimal.html">
+                  <div class="image">
+                    <div class="link">LEARN MORE</div>
+                    <div class="title">OPTIMAL PAGE REPLACEMENT ALGORITHM</div>
+                  </div>
+                  <div class="text">
+                    <div class="text-heading">Know Page Replacement Algorithm.</div>
+                    Page replacement algorithms decide which memory pages to
+                    page out, sometimes called swap out, or write to disk, when
+                    a page of memory needs to be allocated.
+                  </div></a>
+              </div>
+              <div class="disk">
+                <a href="PRIORITY_PREEMPTIVE/priorityalgo.html">
+                  <div class="image">
+                    <div class="link">LEARN MORE</div>
+                    <div class="title">PRIORITY SCHEDULING ALGORITHM</div>
+                  </div>
+                  <div class="text">
+                    <div class="text-heading">Understand Priority Scheduling Algorithm.</div>
+                    Priority Scheduling is a method of scheduling processes that is based on priority. In this algorithm, the scheduler selects the tasks to work as per the priority. 
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">Thanks For Learning With Us</div>
+        <script>
+window.addEventListener('mouseover', initLandbot, { once: true });
+window.addEventListener('touchstart', initLandbot, { once: true });
+var myLandbot;
+function initLandbot() {
+  if (!myLandbot) {
+    var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+    s.addEventListener('load', function() {
+      var myLandbot = new Landbot.Livechat({
+        configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1562731-B1AZODQ0UXND6RI8/index.json',
+      });
+    });
+    s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+}
+</script>
+      </div>
+    </div>
+  </body>
+</html>

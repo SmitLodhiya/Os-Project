@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+       <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link6
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FCFS Disk Scheduling Algorithms Visualization</title>
+        <!--CSS and Script linking-->
+
+        <link rel="stylesheet" href="fcfStyle.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
+    </head>
+      <header>
+
+    <body>     
+    <div class="header">
+      <div class="nav">
+        <div>
+          <div class="name"><a href="../../index.html">HOME</a></div>
+          <div class="logo">VIRTUAL LAB</div>
+          <div class="button">
+            <div>
+              <div></div>
+              MENU
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-item">
+          <div>
+            <a href="#">
+              <div class="fcfs">
+                <div class="short-title">FCFS</div>
+                <div class="long-title">
+                  First come<br />
+                  first serve
+                </div>
+              </div>
+            </a>
+            <a href="../SJF/sjf.html">
+              <div class="sjf">
+                <div class="short-title">SJF</div>
+                <div class="long-title">
+                  Shortest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../LJF/ljf.html">
+              <div class="ljf">
+                <div class="short-title">LJF</div>
+                <div class="long-title">
+                  Longest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="../RR/rr.html">
+              <div class="rr">
+                <div class="short-title">RR</div>
+                <div class="long-title">Round Robin</div>
+              </div>
+            </a>
+            <a href="../SRJF/srjf.html">
+              <div class="srjf">
+                <div class="short-title">SRJF</div>
+                <div class="long-title">
+                  Shortest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PP/pp.html">
+              <div class="pp">
+                <div class="short-title">PP</div>
+                <div class="long-title">
+                  Prioprity<br />
+                  ( preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="../HRRN/hrrn.html">
+              <div class="hrrn">
+                <div class="short-title">HRRN</div>
+                <div class="long-title">
+                  Highest<br />
+                  response ratio<br />
+                  next
+                </div>
+              </div>
+            </a>
+            <a href="../LRJF/lrjf.html">
+              <div class="lrjf">
+                <div class="short-title">LRJF</div>
+                <div class="long-title">
+                  Longest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PNP/pnp.html">
+              <div class="pnp">
+                <div class="short-title">PNP</div>
+                <div class="long-title">
+                  Priority<br />
+                  ( non-preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="theory">
+          <div class="theory-heading">
+            <div>FIRST COME FIRST SERVE</div>
+            <div>F.C.F.S.</div>
+          </div>
+          <div class="theory-text">
+            <div>Basic Theory :</div>
+            <div></div>
+            <div>
+
+<br/>
+FCFS stands for 'first-come-first-serve'. As the name suggests, the request which comes first will be processed first and so on.
+The requests coming to the disk are arranged in a proper sequence as they arrive. 
+Since every request is processed in this algorithm, so there is no chance of 'starvation'.
+
+            </div>
+          </div>
+          <div class="theory-step">
+            <ul>
+              <label>STEP 1 :</label>
+              <li>
+             Initialise a queue to hold the disk requests.
+              </li>
+              <label>STEP 2 :</label>
+              <li>
+                Using enhanced bubble sort technique, sort the all given
+                processes in ascending order according to arrival time in a
+                ready queue.
+              </li>
+              <label>STEP 3 :</label>
+              <li>
+                Add all the disk requests to the queue in the order in which they arrive.
+              </li>
+              <label>STEP 4 :</label>
+              <li>
+                For each request in the queue, calculate the distance between the current head position and the position of the request.
+              </li>
+              <label>STEP 5 :</label>
+              <li>
+                Move the disk head to the position of the request and process the request.
+              </li>
+              <label>STEP 6 :</label>
+              <li>
+                Calculate the total head movement by adding up the distance between each request.
+              </li>
+              <label>STEP 7 :</label>
+              <li>
+                Return the total head movement.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        
+          <div class="container1">
+            <script>
+              function admSelectCheck(nameSelect)
+              {
+                  console.log(nameSelect);
+                  if(nameSelect){
+                      x3 = document.getElementById("o3").value;
+                      x4 = document.getElementById("o4").value;
+                      x5 = document.getElementById("o5").value;
+                      x6 = document.getElementById("o6").value;
+                      x7 = document.getElementById("o7").value;
+                      if(x3 == nameSelect.value || x4 == nameSelect.value || x5 == nameSelect.value || x6 == nameSelect.value || x7 == nameSelect.value){
+                          document.getElementById("admDivCheck").style.display = "block";
+                      }
+                      else{
+                          document.getElementById("admDivCheck").style.display = "none";
+                      }
+                  }
+                  else{
+                      document.getElementById("admDivCheck").style.display = "none";
+                  }
+              }
+              </script>
+            <div class="visualizer" style="">
+            <div class="error">Invalid Input</div>
+            <div class="container" style="margin-bottom: 10px;">
+          <!--   <div class="container" style=" background-color: rgb(224, 224, 224);border-radius: 5px; height: 1px; display: ;height: 6em"> -->
+              <form name="myForm">
+                <fieldset>
+                <div class="add-process">
+                <div class="input">
+                <div class="form-group" style="display:inline-table;margin-left: 5%;">
+                  <label for="bitstream-input" style="
+                  display: inline-table; 
+                  font-family: sans-serif;  
+                  margin: 5px;
+                  font-weight: 500; 
+                  font-size:17px">Sequence of Tracks:</label></div>
+                  <div class="form-group"  style="display:inline-table">
+                  <input style="
+                  display: inline-table; 
+                  font-family: sans-serif;"
+                  type="text"
+                  class="form-control"
+                  id="bitstream-input"
+                  name="bitstream"/></div>
+                  
+                  <label for="initial-input" style="
+                  display: inline-table;
+                  margin: 5px;
+                  font-weight: 500; 
+                  font-size:17px">Initial Cylinder</label>
+              <div class="form-group" style="display: inline-table;">
+                <input style="display:inline-table;"
+                type="number"
+                class="form-control"
+                id="initial-input"
+                name="initial-input"/>
+            </div>
+            <div class="form-group"style="display:inline-block;">
+            <div id="plot-button" class="add-button" style="
+            padding-top: 12px;
+            padding-left: 25px;
+            display: inline-block;" 
+            onclick="getBitStreamAndPlot(event, document.getElementById('bitstream-input').value, document.getElementById('initial-input').value)">
+            &nbsp;SIMULATE&nbsp;</div></div>
+  
+            <div onclick="resetform()" class="add-button" style="
+            color: white;
+            padding-top: 12px;
+            padding-left: 25px;
+            display: inline-block;">RESET</div>
+            </fieldset>
+              </form>
+            <!-- <div id="cal-seek" style="padding-top: 0px;width: 100%; font-size:23px"></div> -->
+          <div id="grph" class="container"style="">
+            <div id="plt_alg_name" style=""></div>
+            <div id="graph_area" style="height: 400px; WIDTH:100%;"></div>            
+            <div id="cal-seek" style="width: 100%; font-size:23px"></div><br><br>
+          </div>
+    </div> </div>       
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="fcfs.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </body>
+</html>
